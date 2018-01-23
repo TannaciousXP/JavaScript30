@@ -12,7 +12,7 @@ Within the body, the structure is
 </div>
 ```
 
-- <kbd> is a tag they set up in style.css
+- <kbd> is a tag that accepts keyboard inputs
 - "data-key" is a custom data attributes which are intended to store custom data private to the page or application, for which they are no more appropriate attributes or elements
 
 ```
