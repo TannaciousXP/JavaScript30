@@ -88,7 +88,7 @@
 
   </style>
 
-
+~
   <div class="panels">
     <div class="panel panel1">
       <p>Hey</p>
@@ -119,13 +119,15 @@
 
   <script>
     const panels = document.querySelectorAll('.panel');
-
+    console.log(panels);
     function toggleOpen() {
       console.log('Hello');
+      console.log('Toggle Open')
       this.classList.toggle('open');
     }
 
     function toggleActive(e) {
+      console.log('Toggle Active');
       console.log(e.propertyName);
       if (e.propertyName.includes('flex')) {
         this.classList.toggle('open-active');
