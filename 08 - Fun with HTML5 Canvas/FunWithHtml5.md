@@ -48,3 +48,4 @@ Need to add event listener with
     lineDirection ? ctx.lineWidth++ : ctx.lineWidth--;
   }
 ```
+

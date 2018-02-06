@@ -9,7 +9,7 @@
   <p onClick="makeGreen()">×BREAK×DOWN×</p>
 
   <script>
-    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'Hugo', age: 8 }];
 
     function makeGreen() {
       const p = document.querySelector('p');
@@ -18,29 +18,64 @@
     }
 
     // Regular
-
+    console.log('Hello');
     // Interpolated
-
+    console.log('Hello I am %s string!', '😉');
     // Styled
-
+    // console.log('%c I am some great text', 'font-size: 18px; background: red');
     // warning!
-
+    console.warn('OH NOOO');
     // Error :|
-
+    console.error('SHIT!');
     // Info
-
-    // Testing
-
+    console.info('Crocidles eat 3-4 people per year');
+    // Testing only shows text if it's wrong
+    console.assert(1 === 2, 'That is wrong');
+    
     // clearing
-
+    console.clear();
     // Viewing DOM Elements
+    const p = document.querySelector('p');
+    console.log(p);
+    console.dir(p);
 
+    console.clear();
     // Grouping together
-
+    dogs.forEach((dog) => {
+      // console.group(dog.name)
+      console.groupCollapsed(dog.name);
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+      console.groupEnd(dog.name);
+    })
     // counting
+    console.count('Peter');
+    console.count('Peter');
+    console.count('Steph');
+    console.count('Peter');
+    console.count('Steph');
+    console.count('Steph');
+    console.count('Steph');
+    console.count('Peter');
+    console.count('Steph');
+    console.count('Peter');
+    console.count('Steph');
+    console.count('Peter');
+    console.count('Peter');
 
+    console.clear();
     // timing
+    console.time('Fetch');
+    // fetch('https://api.github.com/users/webos')
+    //   .then(blob => blob.json())
+    //   .then(data => {
+    //     console.log(data);
+    //     console.timeEnd('Fetch');
+    //   })
 
+    // table takes in array of objects
+    console.table(dogs);
   </script>
 </body>
 </html>
